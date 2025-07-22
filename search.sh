@@ -16,8 +16,20 @@ echo -e "${BLUE}---------------------------------------------------${NC}"
 
 read -p $'\e[1;32mTanlang (1/2/3): \e[0m' option
 
-path="/opt/metasploit-framework/embedded/framework/modules"
-# path="/opt/metasploit-framework/embedded/framework/documentation/modules"
+# Mumkin bo'lgan pathlar
+path1="/opt/metasploit-framework/embedded/framework/modules"
+path2="/usr/share/metasploit-framework/modules"
+
+# Qaysi path mavjud bo'lsa, shuni ishlatadi
+if [ -d "$path1" ]; then
+  path="$path1"
+elif [ -d "$path2" ]; then
+  path="$path2"
+else
+  echo -e "${RED}❗ Metasploit modul papkasi topilmadi.${NC}"
+  echo -e "${YELLOW}Metasploit o‘rnatilganligini va path to‘g‘ri ekanligini tekshiring.${NC}"
+  exit 1
+fi
 
 while true; do
   read -p $'\e[1;32mQidirish uchun kalit so\'zni kiriting: \e[0m' keyword
@@ -52,7 +64,7 @@ while true; do
         find "$path/auxiliary" -iname "$keyword" 2> /dev/null >> ./search_result.txt
         ;;
       *)
-        echo -e "${RED}❗ Tanlov noto'g'ri! Chiqilmoqda.${NC}"
+        echo -e "${RED}❗ Noto‘g‘ri tanlov! Chiqilmoqda.${NC}"
         exit 1
         ;;
     esac
@@ -61,8 +73,8 @@ while true; do
   if [[ -s ./search_result.txt ]]; then
     count=$(wc -l < ./search_result.txt)
     echo -e "${GREEN}✅ $count ta mos modul topildi.${NC}"
-    break  # topildi, qidiruvni tugatadi
+    break
   else
-    echo -e "${RED}⚠️ Hech narsa topilmadi. Yana bir bor urinib ko‘ring.${NC}"
+    echo -e "${RED}⚠️ Hech narsa topilmadi. Yana urinib ko‘ring.${NC}"
   fi
 done
