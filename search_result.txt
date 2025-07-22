@@ -1,0 +1,2 @@
+exploits/unix/ftp/proftpd_133c_backdoor.rb
+exploits/unix/ftp/proftpd_modcopy_exec.rb

@@ -1,0 +1,5 @@
+use exploits/unix/ftp/proftpd_133c_backdoor.rb
+show options
+use exploits/unix/ftp/proftpd_modcopy_exec.rb
+show options
+exit
