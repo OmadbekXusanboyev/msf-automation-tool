@@ -1,2 +1,149 @@
+[1m[34m[*][0m Processing all_options.rc for ERB directives.
+resource (all_options.rc)> use exploits/unix/ftp/proftpd_133c_backdoor.rb
+[0mresource (all_options.rc)> show options
+[0m
+Module options (exploit/unix/ftp/proftpd_133c_backdoor):
 
-Aborting...
+   Name     Current Setting  Required  Description
+   ----     ---------------  --------  -----------
+   CHOST                     no        The local client address
+   CPORT                     no        The local client port
+   Proxies                   no        A proxy chain of format type:host:port[,type:h
+                                       ost:port][...]. Supported proxies: sapni, sock
+                                       s4, socks5, http, socks5h
+   RHOSTS                    yes       The target host(s), see https://docs.metasploi
+                                       t.com/docs/using-metasploit/basics/using-metas
+                                       ploit.html
+   RPORT    21               yes       The target port (TCP)
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Automatic
+
+
+
+View the full module info with the [32minfo[0m, or [32minfo -d[0m command.
+
+resource (all_options.rc)> use exploits/unix/ftp/proftpd_modcopy_exec.rb
+[0m[1m[34m[*][0m No payload configured, defaulting to cmd/unix/reverse_netcat
+resource (all_options.rc)> show options
+[0m
+Module options (exploit/unix/ftp/proftpd_modcopy_exec):
+
+   Name       Current Setting  Required  Description
+   ----       ---------------  --------  -----------
+   CHOST                       no        The local client address
+   CPORT                       no        The local client port
+   Proxies                     no        A proxy chain of format type:host:port[,type
+                                         :host:port][...]. Supported proxies: sapni,
+                                         socks4, socks5, http, socks5h
+   RHOSTS                      yes       The target host(s), see https://docs.metaspl
+                                         oit.com/docs/using-metasploit/basics/using-m
+                                         etasploit.html
+   RPORT      80               yes       HTTP port (TCP)
+   RPORT_FTP  21               yes       FTP port
+   SITEPATH   /var/www         yes       Absolute writable website path
+   SSL        false            no        Negotiate SSL/TLS for outgoing connections
+   TARGETURI  /                yes       Base path to the website
+   TMPPATH    /tmp             yes       Absolute writable path
+   VHOST                       no        HTTP server virtual host
+
+
+Payload options (cmd/unix/reverse_netcat):
+
+   Name   Current Setting  Required  Description
+   ----   ---------------  --------  -----------
+   LHOST  192.168.0.208    yes       The listen address (an interface may be specifie
+                                     d)
+   LPORT  4444             yes       The listen port
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   ProFTPD 1.3.5
+
+
+
+View the full module info with the [32minfo[0m, or [32minfo -d[0m command.
+
+resource (all_options.rc)> exit
+[0m[1m[34m[*][0m Processing all_options.rc for ERB directives.
+resource (all_options.rc)> use exploits/unix/ftp/proftpd_133c_backdoor.rb
+[0mresource (all_options.rc)> show options
+[0m
+Module options (exploit/unix/ftp/proftpd_133c_backdoor):
+
+   Name     Current Setting  Required  Description
+   ----     ---------------  --------  -----------
+   CHOST                     no        The local client address
+   CPORT                     no        The local client port
+   Proxies                   no        A proxy chain of format type:host:port[,type:h
+                                       ost:port][...]. Supported proxies: sapni, sock
+                                       s4, socks5, http, socks5h
+   RHOSTS                    yes       The target host(s), see https://docs.metasploi
+                                       t.com/docs/using-metasploit/basics/using-metas
+                                       ploit.html
+   RPORT    21               yes       The target port (TCP)
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Automatic
+
+
+
+View the full module info with the [32minfo[0m, or [32minfo -d[0m command.
+
+resource (all_options.rc)> use exploits/unix/ftp/proftpd_modcopy_exec.rb
+[0m[1m[34m[*][0m No payload configured, defaulting to cmd/unix/reverse_netcat
+resource (all_options.rc)> show options
+[0m
+Module options (exploit/unix/ftp/proftpd_modcopy_exec):
+
+   Name       Current Setting  Required  Description
+   ----       ---------------  --------  -----------
+   CHOST                       no        The local client address
+   CPORT                       no        The local client port
+   Proxies                     no        A proxy chain of format type:host:port[,type
+                                         :host:port][...]. Supported proxies: sapni,
+                                         socks4, socks5, http, socks5h
+   RHOSTS                      yes       The target host(s), see https://docs.metaspl
+                                         oit.com/docs/using-metasploit/basics/using-m
+                                         etasploit.html
+   RPORT      80               yes       HTTP port (TCP)
+   RPORT_FTP  21               yes       FTP port
+   SITEPATH   /var/www         yes       Absolute writable website path
+   SSL        false            no        Negotiate SSL/TLS for outgoing connections
+   TARGETURI  /                yes       Base path to the website
+   TMPPATH    /tmp             yes       Absolute writable path
+   VHOST                       no        HTTP server virtual host
+
+
+Payload options (cmd/unix/reverse_netcat):
+
+   Name   Current Setting  Required  Description
+   ----   ---------------  --------  -----------
+   LHOST  192.168.0.208    yes       The listen address (an interface may be specifie
+                                     d)
+   LPORT  4444             yes       The listen port
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   ProFTPD 1.3.5
+
+
+
+View the full module info with the [32minfo[0m, or [32minfo -d[0m command.
+
+resource (all_options.rc)> exit
+[0m

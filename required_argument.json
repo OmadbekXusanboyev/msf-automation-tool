@@ -1,1 +1,10 @@
-{}
+{
+  "RHOSTS": "192.168.0.162",
+  "RPORT": "21",
+  "RPORT_FTP": "21",
+  "SITEPATH": "/var/www",
+  "TARGETURI": "/",
+  "TMPPATH": "/tmp",
+  "LHOST": "192.168.0.208",
+  "LPORT": "4444"
+}
